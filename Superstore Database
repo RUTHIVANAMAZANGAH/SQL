@@ -29,16 +29,16 @@ VALUES
 
 
 
-#Use a SELECT statement to order the items by price.
+-- Write a SQL query that orders the items by price
 SELECT item_name, price
 FROM superstore;
-ORDER BY price desc
+ORDER BY price desc;
 
-#Show a statistic about the item prices.
+-- Write your own query that would show statistic about the item prices
 SELECT SUM(price)
-From superstore
+From superstore;
 
-#Show a statistic about the price for items in the category of "Kitchen Supplies". 
+-- Write your own query that will show statistic about the price for the items in the category of kitchen supplies
 SELECT price
 FROM superstore
 WHERE category = "Kitchen Supplies";
