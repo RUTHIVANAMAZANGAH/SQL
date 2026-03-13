@@ -30,18 +30,18 @@ VALUES
 
 
 -- Write a SQL query that orders the items by price
-SELECT item_name, price
+SELECT price, item_name
 FROM superstore;
 ORDER BY price desc;
 
 -- Write your own query that would show statistic about the item prices
-SELECT SUM(price)
+SELECT MAX(price), item_name
 From superstore;
 
 -- Write your own query that will show statistic about the price for the items in the category of kitchen supplies
-SELECT price
+SELECT COUNT(price),category, item_name
 FROM superstore
-WHERE category = "Kitchen Supplies";
+WHERE category = 'Kitchen Supplies';
 
 
 
