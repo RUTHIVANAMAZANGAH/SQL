@@ -62,38 +62,51 @@ VALUES
 
 #Get a quick view of what information the database contain
 
-SELECT *
+SELECT * 
 FROM fortune_companies
+;
 
-#Assign all companies that offer pto days as "enjoyable", "less stressfull", and " stressfull"
-
-SELECT company_name,
-CASE WHEN paid_time_off_days >=15 THEN 'enjoyable'
-WHEN paid_time_off_days>=12 THEN 'less_stressfull'
-ELSE 'stressfull'
-END as pto_friendly_industries
-FROM fortune_companies
-WHERE company_name >= paid_time_off_days;
-
-#What industry retain their employees the most? what is the sum of their average ternure?
-
-SELECT industry,SUM(avg_employee_tenure) as total_retention
-FROM fortune_companies
-GROUP BY industry
-HAVING total_retention>=5;
-
-#What company makes at least $200 billion of revenue and has less then 10000 employees?
+-- 1. Which companies offer healthcare benefits and more than 10 weeks of maternity leave? [filter using WHERE with AND, OR, IN, or NOT IN]
 
 SELECT company_name
 FROM fortune_companies
-WHERE revenue >=200
-AND employees <10000;
+WHERE healthcare_benefits = 1 
+AND maternity_leave_weeks > 10
+;
 
-#How many companies do not offer healthcare benefits?
+-- 2. What is the average revenue for each industries?  name the new comlumn avg_rev [calculation and alias]
+
+SELECT industry,
+ROUND (AVG (revenue),1) as avg_industry_rev
+FROM fortune_companies
+GROUP BY industry
+;
+
+-- 3. #Provide the company name that offfer more than 15 pto days and assign them as "enjoyable", "less stressfull" if at least 15 days is offerred, and ELSE " stressfull" when less then 15 [CASE]
+
+SELECT company_name
+,
+CASE WHEN paid_time_off_days >15 THEN 'enjoyable'
+WHEN paid_time_off_days =15 THEN 'less stressful'
+ELSE 'stressfull'
+END AS pto_friendly
+FROM fortune_companies
+;
+
+-- 4.What industry has the longest average employee retention with employees working more than 7 years? 
+
+SELECT industry
+,MAX(avg_employee_tenure) as highest_avg_retention
+FROM fortune_companies
+GROUP BY industry
+HAVING MAX(avg_employee_tenure) >= 7
+ORDER BY highest_avg_retention desc
+;
+-- 5. #How many companies do not offer healthcare benefits?[up to me!]
 
 SELECT COUNT (*)
 FROM fortune_companies
-WHERE healthcare_benefits =0
-
+WHERE healthcare_benefits = 0
+;
 
 
