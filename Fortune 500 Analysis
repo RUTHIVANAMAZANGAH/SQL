@@ -74,7 +74,7 @@ WHERE healthcare_benefits = 1
 AND maternity_leave_weeks > 10
 ;
 
--- 2. What is the average revenue for each industries?  name the new comlumn avg_rev [calculation and alias]
+-- 2. What is the average revenue for each industries?  name the new comlumn avg_industry_rev [calculation and alias]
 
 SELECT industry,
 ROUND (AVG (revenue),1) as avg_industry_rev
