@@ -65,3 +65,11 @@ ON customers.order_id = FebSales.orderID
 WHERE quantity > 2
 AND length(orderid) = 6
 AND orderid <> 'Order ID';
+
+--Find all orderIDs in the MarSales table where the orderID has the characters ‘16’ in the beginning, followed by one unknown character, then a ‘0’, and any number of characters for the rest.
+
+SELECT orderID
+FROM BIT_DB.MarSales
+WHERE orderID LIKE '16_0%';
+
+
