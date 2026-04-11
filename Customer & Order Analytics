@@ -72,4 +72,47 @@ SELECT orderID
 FROM BIT_DB.MarSales
 WHERE orderID LIKE '16_0%';
 
+----How many of each type of headphone were sold in February?
+
+SELECT SUM(Quantity), Product
+FROM BIT_DB.FebSales
+WHERE Product LIKE '%Headphones%'
+AND length(orderid) = 6
+AND orderid <> 'Order ID'
+GROUP BY Product;
+
+--What was the average amount spent per account in February?
+
+SELECT AVG(quantity*price)
+FROM BIT_DB.FebSales
+JOIN BIT_DB.customers
+ON customers.order_id = FebSales.orderID
+WHERE length(orderid) = 6
+AND orderid <> 'Order ID';
+
+--Find order ids from Georgia (GA) where the order has an average price greater than $1,000. Only find orders from dates beginning with ‘04/1’. Assume that the dates are stored in the MM/DD/YY HH:MM format.
+
+SELECT distinct orderid
+FROM BIT_DB.AprSales
+WHERE location LIKE '%GA%'
+AND orderdate LIKE '04/1%'
+GROUP BY orderid
+HAVING AVG(price) > 1000;
+
+--You’ve been given the following results from the MaySales table. Can you reverse engineer a SQL query that returns these results?
+
+SELECT *
+FROM BIT_DB.MaySales
+WHERE orderid LIKE '1943_5'
+AND length(orderid) = 6
+AND orderid <> 'Order ID'
+ORDER BY orderid;
+
+--Which product brought in the most revenue in January and how much revenue did it bring in total?
+
+SELECT product
+,sum(quantity*price) as revenue
+FROM BIT_DB.JanSales
+GROUP BY product
+ORDER BY sum(quantity*price) desc limit 1;
 
