@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes hospital readmission patterns using a dataset containing 101,766 patient encounters from 130 U.S. hospitals.
+This project analyzes hospital readmission patterns using a dataset containing 101,766 patient encounters from Diabetes 130 U.S. hospitals between the 1999–2008.
 
 ## Objectives
 
@@ -14,7 +14,6 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 ## Tools Used
 
 - SQLite
-- SQL
 - Tableau
 
 ## Key Business Questions
@@ -23,3 +22,20 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 2. Which age groups have the highest readmission rates?
 3. Which medical specialties have the highest readmission rates?
 4. Which age groups have the longest average hospital stay?
+
+## Skills Demonstrated
+
+- SQL Aggregations
+- GROUP BY
+- CASE WHEN
+- Conditional Aggregation
+- KPI Calculations
+- Readmission Rate Analysis
+- Healthcare Data Analytics
+
+  ## Key Findings
+
+- Patients aged 80–90 had the highest readmission rate (48.27%).
+- Older age groups generally experienced longer hospital stays.
+- Readmission rates varied significantly across medical specialties.
+- Internal Medicine generated the highest volume of readmissions.
