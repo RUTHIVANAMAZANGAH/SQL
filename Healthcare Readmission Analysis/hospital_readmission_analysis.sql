@@ -1,4 +1,7 @@
-
+-- Healthcare Readmission Analysis
+-- Author: Ruth Mazangah
+-- Dataset: Diabetes 130-US Hospitals Dataset
+-- Tool: SQLite
 -- ==================================
 -- READMISSION ANALYSIS
 -- ==================================
