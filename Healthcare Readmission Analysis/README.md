@@ -16,6 +16,12 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 - SQLite
 - Tableau
 
+## Tableau Dashboard
+
+View the interactive dashboard here:
+
+[Hospital Readmission & Patient Outcomes Dashboard](https://public.tableau.com/app/profile/ruth.mazangah/vizzes)
+
 ## Key Business Questions
 
 1. What is the overall readmission rate?
@@ -23,7 +29,7 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 3. Which medical specialties have the highest readmission rates?
 4. Which age groups have the longest average hospital stay?
 
-## Skills Demonstrated
+## SQL Skills Demonstrated
 
 - SQL Aggregations
 - GROUP BY
@@ -33,9 +39,26 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 - Readmission Rate Analysis
 - Healthcare Data Analytics
 
-  ## Key Findings
+## Tableau Skills Demonstrated
+
+- SQL aggregations
+- CASE WHEN logic
+- Conditional aggregation
+- Readmission rate calculations
+- Healthcare KPI analysis
+- Tableau dashboard design
+- Data visualization
+
+## SQL Key Findings
 
 - Patients aged 80–90 had the highest readmission rate (48.27%).
 - Older age groups generally experienced longer hospital stays.
 - Readmission rates varied significantly across medical specialties.
 - Internal Medicine generated the highest volume of readmissions.
+
+## Tableau Key Findings
+
+- Overall hospital readmission rate was 46.1%.
+- Patients aged 80–90 had the highest readmission rate at 48.3%.
+- Patients aged 80–90 also had the longest average length of stay at 4.8 days.
+- Podiatry had the highest readmission rate at 58.0% among specialties with at least 100 patient encounters.
