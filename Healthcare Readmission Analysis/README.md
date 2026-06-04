@@ -16,6 +16,10 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 - SQLite
 - Tableau
 
+## Dashboard Preview
+
+![Healthcare Readmission Dashboard](healthcare_readmission_dashboard.png)
+
 ## Tableau Dashboard
 
 View the interactive dashboard here:
