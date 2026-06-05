@@ -15,11 +15,31 @@ This project analyzes healthcare insurance claims data to evaluate claim volume,
 - Identify high-volume diagnosis codes
 - Identify procedure codes generating the highest billed amounts
 
-## Tools Used
+## Tableau Dashboard
 
-- SQLite
-- SQL
-- Tableau
+## Dashboard
+
+Tableau Public Dashboard:
+[https://public.tableau.com/app/profile/ruth.mazangah/viz/InsuranceClaimsRevenueCycleDashboard/InsuranceClaimsRevenueCycleDashboard?publish=yes]
+
+### KPIs
+- Total Claims
+- Total Billed Amount
+- Approval Rate
+- Denial Rate
+
+### Visualizations
+- Claims by Insurance Type
+- Claim Status Distribution
+- Top Denial Reasons
+- Most Common Diagnosis Codes
+- Highest Revenue Procedure Codes
+
+### Tools Used
+
+- SQLite Database
+- SQL Querying
+- Tableau Data Visualization
 
 ## Key Business Questions
 
