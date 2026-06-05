@@ -21,10 +21,11 @@ View the interactive dashboard here:
 - Evaluate medical specialty performance
 - Analyze average length of stay
 
-## Tools Used
+### Tools Used
 
-- SQLite
-- Tableau
+- SQLite Database
+- SQL Querying
+- Tableau Data Visualization
 
 ## Key Business Questions
 
