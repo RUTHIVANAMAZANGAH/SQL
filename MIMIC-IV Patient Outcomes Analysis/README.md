@@ -8,11 +8,13 @@ The objective was to identify patterns in hospital utilization, patient outcomes
 
 This project demonstrates healthcare analytics skills using SQL, SQLite, and Tableau.
 
+---
 
 ## Dashboard Preview
 
-![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard?publish=yes]
+![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard)
 
+---
 
 ## Business Questions Answered
 
@@ -39,6 +41,7 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 ### Advanced SQL Analysis
 13. What is the average patient age by admission type?
 
+---
 
 ## Tools Used
 
@@ -47,6 +50,7 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Tableau
 - MIMIC-IV Clinical Database (Demo Dataset)
 
+---
 
 ## SQL Skills Demonstrated
 
@@ -61,6 +65,8 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - JOIN Operations
 - Healthcare Outcomes Analysis
 - Hospital Operations Analysis
+
+---
 
 ## Dashboard Metrics
 
@@ -79,6 +85,8 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Discharge Locations
 - Mortality Rate by Admission Type
 - Mortality Rate by Admission Source
+
+---
 
 ## Key Findings
 
@@ -112,6 +120,8 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Patients transferred from another hospital had the highest mortality rate among admission sources (13%).
 - Medicaid patients showed the highest observed mortality rate among insurance groups (9%).
 
+---
+
 ## Business Impact
 
 This analysis demonstrates how healthcare organizations can use patient outcome and operational data to:
@@ -123,4 +133,6 @@ This analysis demonstrates how healthcare organizations can use patient outcome 
 - Support quality improvement initiatives
 - Enhance discharge planning and care coordination
 - Improve hospital operational efficiency
+
+Created using SQL, SQLite, and Tableau.
 
