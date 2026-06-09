@@ -12,7 +12,7 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 
 ## Dashboard Preview
 
-![MIMIC-IV Patient Outcomes Dashboard](mimic_iv_patient_outcomes_dashboard.png)
+![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard?publish=yes](mimic_iv_patient_outcomes_dashboard.png)
 
 ---
 
@@ -134,20 +134,3 @@ This analysis demonstrates how healthcare organizations can use patient outcome 
 - Enhance discharge planning and care coordination
 - Improve hospital operational efficiency
 
----
-
-## Files Included
-
-- `mimic_iv_patient_outcomes_analysis.sql`
-- `mimic_iv_patient_outcomes_dashboard.png`
-- `README.md`
-
----
-
-## Author
-
-**Ruth Mazangah**
-
-Healthcare Analytics Portfolio Project
-
-Created using SQL, SQLite, and Tableau.
