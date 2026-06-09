@@ -12,7 +12,7 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 
 ## Dashboard Preview
 
-![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard?publish=yes](mimic_iv_patient_outcomes_dashboard.png)
+![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard?publish=yes]
 
 ---
 
