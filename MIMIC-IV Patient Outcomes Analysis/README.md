@@ -16,30 +16,17 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 
 ---
 
-## Business Questions Answered
+## Key Business Questions 
 
-### Patient Population Analysis
-1. How many unique patients are in the dataset?
-2. How many hospital admissions occurred?
-3. What is the average patient age?
-4. How many patients are male versus female?
+1. What are the characteristics of the hospital's patient population?
 
-### Admission & Utilization Analysis
-5. What are the most common admission types?
-6. Which admission sources send the most patients to the hospital?
-7. Which insurance types are most common?
+2. Which admission sources and admission types drive hospital utilization?
 
-### Discharge & Care Transition Analysis
-8. What are the most common discharge locations?
+3. What discharge patterns exist among hospitalized patients?
 
-### Mortality & Outcomes Analysis
-9. What percentage of patients died during hospitalization?
-10. Which admission type has the highest mortality rate?
-11. Which insurance type has the highest mortality rate?
-12. Which admission source has the highest mortality rate?
+4. Which patient groups experience the highest mortality rates?
 
-### Advanced SQL Analysis
-13. What is the average patient age by admission type?
+5. How can mortality and admission trends support operational planning and quality improvement initiatives?
 
 ---
 
