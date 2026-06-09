@@ -8,11 +8,7 @@ This project analyzes hospital readmission patterns using a dataset containing 1
 
 View the interactive dashboard here:
 
-[Hospital Readmission & Patient Outcomes Dashboard](https://public.tableau.com/app/profile/ruth.mazangah/vizzes)
-
-## Dashboard Preview
-
-![Healthcare Readmission Dashboard](healthcare_readmission_dashboard.png)
+[https://public.tableau.com/app/profile/ruth.mazangah/viz/HospitalReadmissionPatientOutcomesDashboard/HospitalReadmissionPatientOutcomesDashboard)
 
 ## Objectives
 
