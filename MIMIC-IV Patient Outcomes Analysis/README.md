@@ -8,13 +8,11 @@ The objective was to identify patterns in hospital utilization, patient outcomes
 
 This project demonstrates healthcare analytics skills using SQL, SQLite, and Tableau.
 
----
 
 ## Dashboard Preview
 
 ![https://public.tableau.com/app/profile/ruth.mazangah/viz/MIMIC-IVPatientOutcomesHospitalOperationsDashboard/MIMIC-IVPatientOutcomesHospitalOperationsDashboard?publish=yes]
 
----
 
 ## Business Questions Answered
 
