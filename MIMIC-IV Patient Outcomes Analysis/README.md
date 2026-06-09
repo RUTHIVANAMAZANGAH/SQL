@@ -39,7 +39,6 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 ### Advanced SQL Analysis
 13. What is the average patient age by admission type?
 
----
 
 ## Tools Used
 
@@ -48,7 +47,6 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Tableau
 - MIMIC-IV Clinical Database (Demo Dataset)
 
----
 
 ## SQL Skills Demonstrated
 
@@ -63,8 +61,6 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - JOIN Operations
 - Healthcare Outcomes Analysis
 - Hospital Operations Analysis
-
----
 
 ## Dashboard Metrics
 
@@ -83,8 +79,6 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Discharge Locations
 - Mortality Rate by Admission Type
 - Mortality Rate by Admission Source
-
----
 
 ## Key Findings
 
@@ -117,8 +111,6 @@ This project demonstrates healthcare analytics skills using SQL, SQLite, and Tab
 - Urgent admissions experienced the highest mortality rate (13%).
 - Patients transferred from another hospital had the highest mortality rate among admission sources (13%).
 - Medicaid patients showed the highest observed mortality rate among insurance groups (9%).
-
----
 
 ## Business Impact
 
