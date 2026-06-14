@@ -208,18 +208,4 @@ This project provides a data-driven approach to evaluating authorization perform
 * Healthcare Data Visualization
 * Executive Reporting
 
----
 
-## Author
-
-**Ruth Mazangah**
-
-Healthcare Data Analyst | SQL | Tableau | Revenue Cycle Analytics | Healthcare Analytics
-
-GitHub Portfolio:
-https://github.com/RUTHIVANAMAZANGAH
-
-LinkedIn:
-(https://www.linkedin.com/in/ruth-mazangah-866699105/)
-
----
