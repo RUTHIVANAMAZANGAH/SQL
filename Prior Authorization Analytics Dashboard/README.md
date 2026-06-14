@@ -220,6 +220,6 @@ GitHub Portfolio:
 https://github.com/RUTHIVANAMAZANGAH
 
 LinkedIn:
-(Add LinkedIn Profile URL)
+(https://www.linkedin.com/in/ruth-mazangah-866699105/)
 
 ---
