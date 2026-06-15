@@ -1,6 +1,8 @@
 -- =====================================================
 -- Prior Authorization Analytics Dashboard
 -- Synthetic Healthcare Dataset Based on Real-World Radiology Workflow
+-- KPI rates are calculated using authorization_required = 'Yes'
+-- because approval and denial rates should only apply to cases requiring prior authorization.
 -- Author: Ruth Mazangah
 -- Tools: SQL, SQLite, Tableau
 -- =====================================================
