@@ -7,7 +7,13 @@ This project analyzes radiology prior authorization requests to evaluate authori
 The dashboard provides operational insights that can help healthcare organizations improve authorization workflows, reduce denials, and identify opportunities to optimize payer relationships.
 
 ---
+## Dashboard Preview
 
+The Tableau dashboard provides a centralized view of prior authorization operations, enabling users to monitor authorization volume, payer performance, denial patterns, turnaround times, and procedure demand through interactive filtering and visual analytics.
+
+[https://public.tableau.com/app/profile/ruth.mazangah/viz/PriorAuthorizationAnalyticsDashboard/PriorAuthorizationAnalyticsDashboard]
+
+---
 ## Business Problem
 
 Prior authorizations are a critical component of healthcare operations and revenue cycle management. Delays, denials, and inconsistent payer performance can lead to postponed patient care, increased administrative burden, and lost revenue.
@@ -256,12 +262,6 @@ and excluded blank turnaround values.
 
 * MRI studies represented the majority of high-volume authorization requests.
 * Lumbar Spine and Brain MRI procedures generated the highest authorization demand.
-
----
-
-## Dashboard Preview
-
-The Tableau dashboard provides a centralized view of prior authorization operations, enabling users to monitor authorization volume, payer performance, denial patterns, turnaround times, and procedure demand through interactive filtering and visual analytics.
 
 ---
 
