@@ -288,10 +288,3 @@ The Tableau dashboard provides a centralized view of prior authorization operati
 
 ---
 
-## Author
-
-**Ruth Mazangah**
-
-Healthcare Data Analytics Portfolio Project
-
-Built using SQL, SQLite, and Tableau.
