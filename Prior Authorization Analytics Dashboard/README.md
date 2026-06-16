@@ -1,152 +1,217 @@
 # Prior Authorization Analytics Dashboard
 
----
-
 ## Project Overview
 
-This project analyzes prior authorization requests using a synthetic healthcare dataset modeled after real-world radiology authorization workflows. The analysis focuses on authorization performance, denial management, payer trends, turnaround times, provider activity, and operational efficiency.
+This project analyzes radiology prior authorization requests to evaluate authorization volume, approval performance, denial trends, payer turnaround times, and procedure utilization. The analysis was performed using SQL for data exploration and Tableau for dashboard visualization.
 
-The goal of this project is to demonstrate how SQL and Tableau can be used to support healthcare operations, improve revenue cycle performance, identify authorization bottlenecks, and provide actionable insights for leadership decision-making.
+The dashboard provides operational insights that can help healthcare organizations improve authorization workflows, reduce denials, and identify opportunities to optimize payer relationships.
 
 ---
 
 ## Business Problem
 
-Prior authorization is a critical component of the healthcare revenue cycle. Delays, denials, missing documentation, and payer-specific requirements can impact patient care, reimbursement timelines, and operational efficiency.
+Prior authorizations are a critical component of healthcare operations and revenue cycle management. Delays, denials, and inconsistent payer performance can lead to postponed patient care, increased administrative burden, and lost revenue.
 
-Healthcare organizations need visibility into:
+This project was designed to answer key operational questions:
 
-* Authorization approval and denial rates
-* Payer-specific authorization performance
-* Common denial reasons
-* Authorization turnaround times
-* High-volume procedures requiring authorization
-* Provider authorization patterns
-* Monthly authorization trends
-
-This project provides a data-driven approach to evaluating authorization performance and identifying opportunities for process improvement.
-
----
-
-## Tools Used
-
-* SQL
-* SQLite
-* Tableau
-* Healthcare Analytics
-* Revenue Cycle Analytics
-* Data Visualization
+* How many prior authorization requests are being processed?
+* What are the overall approval and denial rates?
+* Which payers have the highest approval rates?
+* What are the most common denial reasons?
+* Which payers have the longest turnaround times?
+* What procedures require authorization most frequently?
+* How do authorization volumes trend over time?
 
 ---
 
 ## Dataset Information
 
-**Dataset Type:** Synthetic Healthcare Dataset Based on Real-World Prior Authorization Workflow
+**Dataset:** Synthetic Radiology Prior Authorization Dataset
 
 **Records:** 5,000 Prior Authorization Requests
 
-### Key Fields
+**Key Fields:**
 
 * Authorization ID
 * Submission Date
-* Authorization Status
 * Payer
-* Procedure Code
 * Procedure Description
-* Ordering Provider
-* Turnaround Days
+* Authorization Status
+* Authorization Required
 * Denial Reason
+* Turnaround Days
 * Modality
-* Urgency
-* Peer-to-Peer Required
-* Clinical Documentation Received
+* CPT Code
 
 ---
 
-## Key Business Questions
+## Tools Used
 
-### Authorization Performance
+### SQL (SQLite)
 
-1. How many total prior authorization records are in the dataset?
-2. What is the overall approval rate?
-3. What is the overall denial rate?
-4. What is the average turnaround time in days?
+Used to:
 
-### Authorization Status Analysis
+* Aggregate authorization volume
+* Calculate approval and denial rates
+* Analyze payer performance
+* Identify denial trends
+* Calculate turnaround times
+* Evaluate procedure utilization
 
-5. How many authorizations fall into each authorization status category?
+### Tableau
 
-### Payer Analysis
+Used to create:
 
-6. Which payers have the highest number of authorization requests?
-7. What is the approval rate by payer?
-8. What is the denial rate by payer?
-9. Which payers have the longest average turnaround times?
-
-### Denial Management Analysis
-
-10. Which denial reasons occur most frequently?
-11. What is the denial rate for cases where clinical documentation was not received?
-12. Which months had the highest denial rates?
-
-### Procedure & Modality Analysis
-
-13. Which procedures require prior authorization most frequently?
-14. Which procedure codes require authorization most often?
-15. What is the approval rate by imaging modality?
-
-### Workflow & Operational Analysis
-
-16. What is the average turnaround time by urgency level?
-17. How many authorizations required peer-to-peer review?
-
-### Provider Analysis
-
-18. Which providers submit the most prior authorization requests?
-19. Which providers have the highest denial rates?
-
-### Trend Analysis
-
-20. What is the monthly trend of authorization submissions?
+* KPI Cards
+* Bar Charts
+* Trend Analysis
+* Interactive Dashboard Filters
+* Custom Tooltips
 
 ---
 
-## Key Findings
+## SQL Analysis Questions
 
-### Authorization Performance
+### 1. How many prior authorization requests were processed?
 
-* Total Prior Authorizations: 5,000
-* Overall Approval Rate: 55.8%
-* Overall Denial Rate: 17.9%
-* Average Turnaround Time: 8 Days
-
-### Payer Performance
-
-* UnitedHealthcare generated the highest authorization volume.
-* MetroPlus Health had the highest denial rate.
-* MetroPlus Health also had the longest average turnaround time.
-
-### Denial Management
-
-* Medical Necessity Not Met was the most common denial reason.
-* Missing Clinical Documentation was the second most common denial reason.
-* Requests missing clinical documentation experienced a denial rate of 36.1%, approximately double the overall denial rate.
-
-### Procedure Analysis
-
-* MRI Lumbar Spine Without Contrast generated the highest authorization volume.
-* MRI services represented the largest share of authorization requests.
-
-### Workflow Analysis
-
-* 206 authorization requests required peer-to-peer review.
-* Routine requests experienced the longest turnaround times compared to Urgent and STAT requests.
+**Result:** 5,000 Total Requests
 
 ---
 
-## Tableau Dashboard
+### 2. What is the overall approval rate for requests requiring prior authorization?
 
-### KPIs
+**Result:** 64.1%
+
+**Logic Used:**
+
+Only records where:
+
+```sql
+authorization_required = 'Yes'
+```
+
+were included in the calculation.
+
+---
+
+### 3. What is the overall denial rate for requests requiring prior authorization?
+
+**Result:** 20.5%
+
+**Logic Used:**
+
+Only records where:
+
+```sql
+authorization_required = 'Yes'
+```
+
+were included in the calculation.
+
+---
+
+### 4. What is the average turnaround time for completed authorization decisions?
+
+**Result:** 9.1 Days
+
+**Logic Used:**
+
+Included only:
+
+```sql
+authorization_status IN ('Approved','Denied')
+```
+
+and excluded blank turnaround values.
+
+---
+
+### 5. How are authorization requests distributed by status?
+
+| Status       | Count |
+| ------------ | ----: |
+| Approved     | 2,790 |
+| Denied       |   893 |
+| Not Required |   622 |
+| Pending      |   433 |
+| Withdrawn    |   159 |
+| Cancelled    |   103 |
+
+---
+
+### 6. Which payers process the highest authorization volume?
+
+| Payer                       | Requests Requiring Authorization |
+| --------------------------- | -------------------------------: |
+| UnitedHealthcare            |                              740 |
+| Aetna                       |                              629 |
+| Empire BlueCross BlueShield |                              584 |
+| Cigna                       |                              430 |
+| Healthfirst                 |                              410 |
+
+---
+
+### 7. Which payers have the highest approval rates?
+
+| Payer                       | Approval Rate |
+| --------------------------- | ------------: |
+| UnitedHealthcare            |         66.6% |
+| Humana                      |         66.2% |
+| Healthfirst                 |         65.9% |
+| Empire BlueCross BlueShield |         64.6% |
+| Medicaid                    |         63.9% |
+
+---
+
+### 8. What are the most common denial reasons?
+
+| Denial Reason                  | Count |
+| ------------------------------ | ----: |
+| Medical necessity not met      |   239 |
+| Missing clinical documentation |   166 |
+| Payer requested peer-to-peer   |    97 |
+| Member eligibility issue       |    83 |
+| Out-of-network provider        |    66 |
+
+---
+
+### 9. Which payers have the longest average turnaround times?
+
+| Payer                       | Avg Turnaround Days |
+| --------------------------- | ------------------: |
+| Medicaid                    |                 9.5 |
+| Empire BlueCross BlueShield |                 9.5 |
+| MetroPlus Health            |                 9.3 |
+| Medicare                    |                 9.2 |
+| Healthfirst                 |                 9.1 |
+
+**Logic Used:**
+
+Included only completed authorization decisions:
+
+```sql
+authorization_status IN ('Approved','Denied')
+```
+
+and excluded blank turnaround values.
+
+---
+
+### 10. Which procedures most frequently require prior authorization?
+
+| Procedure                                  | Count |
+| ------------------------------------------ | ----: |
+| MRI Lumbar Spine without Contrast          |   573 |
+| MRI Brain without Contrast                 |   552 |
+| MRI Lower Extremity Joint without Contrast |   418 |
+| CT Abdomen/Pelvis with Contrast            |   418 |
+| CT Head without Contrast                   |   321 |
+
+---
+
+## Tableau Dashboard Features
+
+### KPI Cards
 
 * Total Authorizations
 * Approval Rate
@@ -157,55 +222,76 @@ This project provides a data-driven approach to evaluating authorization perform
 
 * Authorization Status Distribution
 * Approval Rate by Payer
-* Denial Rate by Payer
-* Turnaround Time by Payer
 * Top Denial Reasons
-* Monthly Authorization Trend
-* Top Procedures Requiring Authorization
+* Average Turnaround Time by Payer
+* Monthly Authorization Submission Trend
+* Top Procedures Requiring Prior Authorization
+
+### Interactive Filters
+
+* Payer
+* Authorization Status
+* Month of Submission
+
+---
+
+## Key Findings
+
+### Approval Performance
+
+* 64.1% of requests requiring authorization were approved.
+* UnitedHealthcare demonstrated the highest approval rate among major payers.
+
+### Denial Trends
+
+* Medical necessity issues represented the leading denial reason.
+* Documentation-related denials were also a significant contributor.
+
+### Turnaround Time
+
+* Average completed authorization turnaround time was 9.1 days.
+* Medicaid and Empire BlueCross BlueShield had the longest average turnaround times.
+
+### Procedure Utilization
+
+* MRI studies represented the majority of high-volume authorization requests.
+* Lumbar Spine and Brain MRI procedures generated the highest authorization demand.
 
 ---
 
 ## Dashboard Preview
 
-![Prior Authorization Analytics Dashboard](prior_authorization_analytics_dashboard.png)
+The Tableau dashboard provides a centralized view of prior authorization operations, enabling users to monitor authorization volume, payer performance, denial patterns, turnaround times, and procedure demand through interactive filtering and visual analytics.
 
 ---
 
-## Files Included
+## Project Files
 
+* SQL Queries (.sql)
+* Tableau Dashboard (.twb / .twbx)
+* Dashboard Screenshot (.png)
 * README.md
-* prior_authorization_analytics.sql
-* prior_authorization_analytics_dashboard.png
 
 ---
 
 ## Skills Demonstrated
 
-### SQL Skills
-
-* Aggregations
-* CASE WHEN Logic
-* GROUP BY
-* ORDER BY
-* Date Functions
-* KPI Calculations
-* Conditional Analysis
-
-### Healthcare Analytics Skills
-
-* Prior Authorization Analysis
-* Denial Management
-* Revenue Cycle Analytics
-* Payer Performance Analysis
-* Provider Analysis
-* Turnaround Time Analysis
-* Workflow Optimization
-
-### Tableau Skills
-
+* SQL Aggregations
+* Data Cleaning
+* Healthcare Analytics
+* Revenue Cycle Analysis
+* Prior Authorization Operations
+* Tableau Dashboard Design
 * KPI Development
-* Interactive Dashboard Design
-* Healthcare Data Visualization
-* Executive Reporting
+* Data Visualization
+* Business Insights & Storytelling
 
+---
 
+## Author
+
+**Ruth Mazangah**
+
+Healthcare Data Analytics Portfolio Project
+
+Built using SQL, SQLite, and Tableau.
