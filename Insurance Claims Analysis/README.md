@@ -20,7 +20,7 @@ This project analyzes healthcare insurance claims data to evaluate claim volume,
 ## Dashboard
 
 Tableau Public Dashboard:
-[https://public.tableau.com/app/profile/ruth.mazangah/viz/InsuranceClaimsRevenueCycleDashboard/InsuranceClaimsRevenueCycleDashboard?publish=yes]
+[https://public.tableau.com/app/profile/ruth.mazangah/viz/InsuranceClaimsRevenueCycleDashboard_v2026_1/InsuranceClaimsRevenueCycleDashboard]
 
 ### KPIs
 - Total Claims
