@@ -41,7 +41,8 @@ WHERE authorization_required = "Yes";
 SELECT
     ROUND(AVG(turnaround_days),1) AS avg_turnaround_days
 FROM prior_authorizations
-WHERE turnaround_days <> '';
+WHERE authorization_status IN ('Approved','Denied')
+AND (turnaround_days <> '';
 
 -- =====================================================
 -- 2. AUTHORIZATION STATUS ANALYSIS
