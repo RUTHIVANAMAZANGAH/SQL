@@ -11,7 +11,8 @@ The dashboard provides operational insights that can help healthcare organizatio
 
 The Tableau dashboard provides a centralized view of prior authorization operations, enabling users to monitor authorization volume, payer performance, denial patterns, turnaround times, and procedure demand through interactive filtering and visual analytics.
 
-[https://public.tableau.com/app/profile/ruth.mazangah/viz/PriorAuthorizationAnalyticsDashboard/PriorAuthorizationAnalyticsDashboard]
+[https://public.tableau.com/app/profile/ruth.mazangah/viz/PriorAuthorizationAnalyticsDashboard/Dashboard1
+]
 
 ---
 ## Business Problem
